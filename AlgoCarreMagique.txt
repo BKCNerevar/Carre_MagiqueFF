@@ -1,0 +1,160 @@
+Algorithme Carré Magique
+//ENTREE 
+//SORTIE un carré magique 
+//But Sortir un carré magique
+
+Const
+
+Type
+
+	tab2d:tableau[1..Max,1..max] de ENTIER
+
+Procedure CreaTab (var init:tab2d,abs:ENTIER,ord:ENTIER)
+	
+VAR	
+	i,j, : ENTIER
+
+DEBUT
+Ecrire "veuillez saisir un nombre impair pour créer le tableau"
+	Lire(init)
+	POUR j <- 1 A MAX FAIRE
+		DEBUT
+			POUR i <- 1 A MAX FAIRE
+				DEBUT
+					tab2d [i,j]<-0
+				FIN
+			
+		FIN
+	 abs<-(abs/2+1)
+	 ord<-(ord/2)
+	 init[abs,ord]=1
+
+Procedure TestBordD (var x1 : ENTIER ; var y1 : ENTIER);
+//Sortie un axe pour placer 
+		
+					DEBUT
+						Si (x1 > MAX) ALORS
+							début
+								x1 <- 1
+							FIN
+							Si (y1<1) then
+							début
+								y1 <- max
+							fin
+					fin
+					
+					
+Procedure TestBordG (var x3 : ENTIER; y3: ENTIER)
+
+				Début
+					Si x3-1<1) ALORS
+						début
+							x3 <- MAX
+						Fin
+					Sinon
+						debut
+							x3 <- (x3-1)
+						fin
+					Si (y3-1<1) ALORS
+						debut
+							y3 <- Max
+						fin
+					Sinon
+						y3 <- y3-1
+				Fin
+				
+Fonction Test (T2Dim: tab2d; x2:ENTIER ; y2:ENTIER) : Booleen
+
+				début
+					Si T2Dim[x2,y2]=0 ALORS
+									Test= vrai
+					Sinon
+									Test= Faux
+									
+				Fin
+				
+				
+				
+Procedure Initialisation (var Matrice0: tab2d; var abs: ENTIER; var ord: ENTIER)
+			VAR
+				i,j: ENTIER
+		debut
+				Pour j<-1 à max faire
+					debut
+						Matrice0[i,j]= 0
+					fin
+				Ecrire
+			Fin
+			Matrice0[(MAX DIV 2)+1, (MAX DIV 2)]=1
+			abs= (MAX DIV 2)+1)
+			ord= (MAX DIV 2)
+		FIN
+		
+Procedure Remplissage (var tab: tab2d; var x: ENTIER; var y: ENTIER)
+					
+		VAR	
+			i,j: INTEGER
+			
+		DEBUT
+			Pour i<-2 à (MAX*MAX) FAIRE
+				debut
+					x<-x+1
+					y<-y-1
+					TestBordD(x,y)
+						Si (Test(tab,x,y)=FALSE) ALORS
+							debut
+								repeter
+									TestBordG(x,y)
+								Jusqu'a (Test(tab,x,y)=Vrai
+				Fin
+				
+			Tab[x,y]=impair
+			affichage(tab)
+			lire
+		fin
+FIN
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
